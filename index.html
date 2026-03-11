@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-Sketch Pro</title>
+</head>
+
+<body>
+    <main class="app-container">
+
+        <aside class="controls">
+            <h1 class="logo">Etch <span class="sub">a Sketch</span></h1>
+
+            <div class="control-group">
+                <label for="colorPicker">Color</label>
+                <div class="color-picker-wrapper">
+                    <input type="color" id="colorPicker" value="#000000">
+                </div>
+            </div>
+
+            <div class="control-group tools">
+                <p class="group-title">Tools</p>
+                <button class="tool-btn active" id="penBtn" data-tool="pen">Pen</button>
+                <button class="tool-btn" id="pencilBtn" data-tool="pencil">Pencil (Shade)</button>
+                <button class="tool-btn" id="eraserBtn" data-tool="eraser">Eraser</button>
+                <button class="tool-btn" id="fillBtn" data-tool="fill">Bucket Fill</button>
+            </div>
+
+            <div class="control-group size-group">
+                <label for="sizeSlider">Grid Size: <span id="sizeValue">16</span> x <span
+                        id="sizeValue2">16</span></label>
+                <input type="range" id="sizeSlider" min="2" max="100" value="16" class="slider">
+            </div>
+
+            <div class="control-group actions">
+                <button class="action-btn" id="clearBtn">Clear Board</button>
+            </div>
+
+        </aside>
+
+        <section class="board-wrapper">
+            <div class="container" id="board"></div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
